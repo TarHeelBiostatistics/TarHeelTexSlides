@@ -5,3 +5,4 @@
 *.out
 *.toc
 *.log
+.DS_Store
