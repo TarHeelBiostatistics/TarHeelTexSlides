@@ -1,0 +1,82 @@
+
+%\documentclass{beamer}
+\documentclass[usenatbib]{beamer}
+\usepackage[numbers]{natbib}
+%\usepackage{natbib}
+
+\input{template_mode_file_1.tex}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{epstopdf}
+%\usepackage{enumitem}
+%\usepackage{hyperref}
+%\setcounter{section}{-1}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+
+\definecolor{darkblue1}{HTML}{000F89}%%for TV plots 
+\definecolor{purple2}{HTML}{CA1F7B}%%for BH plots
+\renewcommand\bibsection{%
+	%	\clearpage
+	\noindent\normalsize\MakeUppercase{}%
+	%	\markboth{\MakeUppercase{}}{\MakeUppercase{}}%
+}
+
+\newenvironment<>{varblock}[2][.9\textwidth]{%
+	\setlength{\textwidth}{#1}
+	\begin{actionenv}#3%
+		\def\insertblocktitle{#2}%
+		\par%
+		\usebeamertemplate{block begin}}
+	{\par%
+		\usebeamertemplate{block end}%
+	\end{actionenv}}
+	
+
+
+\title[Slides]{Carolina Blue Slides}
+\author[J.Q. Tar Heel]{John Q. Tar Heel}
+\institute{UNC Biostatistics}
+\date{2017-06-16}
+
+\begin{document}
+%example code of the title page
+\begin{frame}
+\titlepage
+
+%\begin{figure}
+%\begin{flushleft}
+%%\includegraphics[scale=0.3]{unc_gillings_logo.png}
+%\end{flushleft}
+%\end{figure}
+\end{frame}
+
+\section{Section 1}
+\section{Section 2}
+\section{Section 3}
+
+\begin{frame}
+\frametitle{Frametitle}
+\begin{enumerate}
+\item Item 1
+\vfill
+\item Item 2fa
+\end{enumerate}
+\vfill
+\begin{block}{Model}
+$$E[Y]=X\beta+\epsilon$$
+\end{block}
+\end{frame}
+
+\section{Section 4}
+\begin{frame}
+\frametitle{Frametitle}
+\begin{itemize}
+\item Bullet 1
+\vfill
+\item Bullet 2
+\end{itemize}
+\end{frame}
+\end{document}

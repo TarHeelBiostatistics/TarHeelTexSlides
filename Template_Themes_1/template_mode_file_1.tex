@@ -1,0 +1,148 @@
+
+\mode<presentation> {
+
+
+%So to make the change you describe in point 1 in the mode_file_2.tex file, replace everything  the \setbeamertemplate{headline} settings with the following
+%
+%\setbeamertemplate{headline}
+%{%
+%	\leavevmode%
+%	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex]{section in head/foot}%
+%		\hbox to .5\paperwidth{\hfil\insertsectionhead\hfil}
+%	\end{beamercolorbox}%
+%	\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex]{subsection in head/foot}%
+%		\hbox to .5\paperwidth{\hfil\insertsubsectionhead\hfil}
+%	\end{beamercolorbox}%
+%}
+%
+%As for the rounded corners issue,  these two lines will round your blocks and your title slide title:
+%\setbeamertemplate{blocks}[rounded][shadow=false]
+%\useinnertheme{rounded}
+%
+%However, I am not sure how to round the header and footer nicely. In the [] options for the beamercolorbox environment, you can specify "rounded = true", but this does some strange things to the frametitle and is not noticeable if you do this to the headline and/or footline.
+
+
+
+
+
+%%UNC logo if desired
+% http://sph.unc.edu/comm/logos/
+	
+	\usecolortheme{default}
+	%\setbeamercovered{transparent}
+	
+	
+	\definecolor{carolina2}{HTML}{82CAFA}%%i think this is too light
+	\definecolor{carolina}{HTML}{7BAFD4}%%fron the https://en.wikipedia.org/wiki/Carolina_blue
+%	\definecolor{carolinadarkblue}{HTML}{000080} %%an attempt
+		\definecolor{carolinadarkblue}{HTML}{0c3085} %%an attempt
+	
+	%\definecolor{carolina}{HTML}{3BB9FF}
+	%\definecolor{gray}{HTML}{B6B6B4}
+	%\definecolor{dark}{HTML}{151B54}
+	
+	\usetheme{Berlin}
+%	\usetheme{Ilmenau}
+%	\usetheme{Dresden}
+%	\usetheme{Berkeley}
+	\setbeamercolor{structure}{fg=carolina}
+	
+	%1b. Makes certain things have black font. fg is the option for font color, bg is the option for background color.
+	\setbeamercolor{block title}{fg=black,bg=carolina}
+	\setbeamercolor{frametitle}{fg=black}
+	\setbeamercolor{title}{fg=black}
+	
+	\setbeamertemplate{blocks}[rounded][shadow=false]
+	%1a. Removes line between header with section titles and frame title
+	\setbeamertemplate{headline}
+	{%
+		\begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+		\end{beamercolorbox}
+		\begin{beamercolorbox}{section in head/foot}
+%			\vskip 2 pt \insertnavigation{\paperwidth}\vskip 3 pt %%this is space after the header bar			
+%			\vskip 3 pt {\insertsection}\vskip 7 pt %%this is space after the header bar
+	\vskip 4 pt
+%			 \begin{beamercolorbox}[dp=0.5ex]{section in head/foot}
+%			 	\shadowtextline{\insertsection}
+%			 \end{beamercolorbox}
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+		\end{beamercolorbox}
+	}
+	%1b use fg=white to make the active section appear in white font
+	\setbeamercolor{section in head/foot}{fg=black, bg=carolina} 
+	
+	
+	
+	\setbeamertemplate{frametitle}
+	{\vskip-3pt
+		\leavevmode
+		\hbox{%
+			\begin{beamercolorbox}[wd=\paperwidth,ht=2 ex,dp=1ex]{frametitle}%
+%				\vspace*{-0.25em}\raggedright\hspace*{0.23em}			
+%				\vspace*{ 1 in}\raggedright\hspace*{5 in}
+				\hspace{0.109 in}\raggedright
+				\insertframetitle
+			\end{beamercolorbox}
+		}%
+	}
+	
+	%1d.
+	%To remove footline but keep slide count and nav symbols:
+	%\setbeamertemplate{footline}[pagenumber]{}
+	%To remove navigation symbols:
+	%\setbeamertemplate{navigation symbols}{}
+	%To remove entire footer:
+	%\setbeamertemplate{footline}{}
+	%To restructure footer:
+	\setbeamertemplate{footline}
+	{
+		\leavevmode%
+		\hbox{%
+			\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+				\usebeamerfont{author in head/foot} \hspace*{-2.2 em}\insertshortauthor %\insertshortinstitute
+			\end{beamercolorbox}%
+			\begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+%				\usebeamerfont{title in head/foot}\insertshorttitle			
+				\usebeamerfont{title in head/foot}\insertsection
+				
+%				\vskip 3 pt {\insertsection}\vskip 7 pt
+			\end{beamercolorbox}%
+			\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+				\hspace*{-2.5 em} \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{1.5 em}
+				\insertframenumber{} / \inserttotalframenumber\hspace*{3ex} 
+			\end{beamercolorbox}}%
+			\vskip0pt%
+%			\hbox{%
+%				\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+%					\usebeamerfont{author in head/foot} \hspace{-0.864 in}\insertshortauthor
+%				\end{beamercolorbox}%
+%				\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+%					\usebeamerfont{title in head/foot}\insertshorttitle
+%				\end{beamercolorbox}%
+%				\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+%					\hspace*{-2.5 em} \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{1.5 em}
+%					\insertframenumber{} / \inserttotalframenumber\hspace*{3ex} 
+%				\end{beamercolorbox}}%
+%				\vskip0pt%
+		}
+		%1b. Sets colors for font and background in footer. Can change them as you please. (Remove bg options for original Berlin)
+		\setbeamercolor{author in head/foot}{fg=black, bg=carolina}
+		\setbeamercolor{title in head/foot}{fg=black, bg=carolina}
+		\setbeamercolor{date in head/foot}{fg=black, bg=carolina}
+		
+		\setbeamertemplate{caption}[numbered]
+		
+		%1c. Changes the bullets to circles, as can be seen as slide 2
+		\setbeamertemplate{enumerate items}[circle]
+%		\setbeamercolor{enumerate items}{fg=black, bg=carolina}
+		\setbeamertemplate{itemize items}[circle]
+		\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+		%Makes math font more "mathy."
+		\usefonttheme[onlymath]{serif}
+	}
+	
+	
+%	\justifying
+	\setbeamersize{text margin left=1.8em,text margin right=1.8em}
+%	\setlength{\parindent}{2em}
