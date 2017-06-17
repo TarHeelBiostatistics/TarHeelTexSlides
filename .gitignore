@@ -6,3 +6,9 @@
 *.toc
 *.log
 .DS_Store
+*.nav
+*.gz
+*.bbl
+*.blg
+*.snm
+scratch/
