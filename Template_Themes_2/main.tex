@@ -1,0 +1,87 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+
+\mode<presentation> {
+
+%Daniel Luckett, Xiaotong Jiang, Crystal Nguyen 
+%August 17, 2016
+
+\usecolortheme{default}
+%\setbeamercovered{transparent}
+
+\definecolor{carolina}{HTML}{82CAFA}
+%\definecolor{carolina}{HTML}{3BB9FF}
+%\definecolor{gray}{HTML}{B6B6B4}
+%\definecolor{dark}{HTML}{151B54}
+
+\usetheme{Madrid}
+\setbeamercolor{structure}{fg=carolina}
+\setbeamercolor{block title}{bg=carolina}
+
+%Uncomment the following if you prefer for the font color on carolina blue background to be black.
+%\setbeamercolor{block title}{fg=black,bg=carolina}
+%\setbeamercolor{frametitle}{fg=black}
+%\setbeamercolor{title}{fg=black}
+
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{enumerate items}[circle]
+\setbeamertemplate{itemize items}[circle]
+
+\usefonttheme[onlymath]{serif}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] 
+
+% To replace the footer line in all slides with a simple slide count uncomment this line
+%\setbeamertemplate{navigation symbols}{}
+
+% To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+%some commonly used packages
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{fancyvrb}
+\usepackage{comment}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{lipsum}
+\usepackage{caption}
+\usepackage{comment}
+\usepackage{multi row}
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu} %Instead of \bar or \overline, use \overbar for proper length and thickness bar for sample average. 
+
+
+%Edit the following lump of code to customize with your name, title, and date
+\title[Template]{UNC Beamer Template}
+\author[Jiang, Nguyen, Luckett]{Xiaotong Jiang, Crystal Nguyen, and Daniel Luckett}
+\institute{UNC}
+\date{4/24/2017}
+
+\begin{document}
+%example code of the title page
+\begin{frame}
+\titlepage
+\begin{figure}
+\begin{flushleft}
+\includegraphics[scale=0.3]{unc_gillings_logo.png}
+\end{flushleft}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Frametitle}
+\begin{enumerate}
+\item Item 1
+\vfill
+\item Item 2
+\end{enumerate}
+\vfill
+\begin{block}{Model}
+$$E[Y]=X\beta+\epsilon$$
+\end{block}
+\end{frame}
+
+\end{document}
